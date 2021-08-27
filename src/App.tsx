@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Current from './components/Current';
+import PriceHistory from './components/PriceHistory';
 
 function App() {
   return (
@@ -14,27 +15,13 @@ function App() {
         <Route path='/' exact>
           <Current />
         </Route>
-        <Route path="/current">
+        <Route path="/current" exact>
           <Current />
         </Route>
         <Route path="/history/select" exact>
-          {/* template for /history/select */}
-          <div className='text-center space-y-3 space-x-3'>
-            <p className='text-2xl font-semibold'>Select historical range</p>
-            <span>From date</span>
-            <input type='date' onChange={e => console.log(e.target.value)}></input>
-            <span>To date</span>
-            <input type='date' onChange={e => console.log(e.target.value)}></input>
-            <br />
-            <br />
-            <Link to='/history/result' >
-              <button>
-                Get data
-              </button>
-            </Link>
-          </div>
+          <PriceHistory />
         </Route>
-        <Route path='/history/result' exact>
+        <Route path='/history/result?range'>
           {/* template for /history/result */}
           <div className='text-center space-y-3'>
             <p className='text-2xl font-semibold'>Historical price</p>
