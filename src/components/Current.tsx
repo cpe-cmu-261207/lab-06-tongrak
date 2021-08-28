@@ -1,6 +1,6 @@
 import axios from "axios";
 import { async } from "q";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -24,7 +24,9 @@ const Current = () => {
         setLoadSta(false);
     }
 
-    fetchData();
+    useEffect(() => {
+        fetchData();
+    }, [])
 
     const render = () => {
         if(loadStatus)

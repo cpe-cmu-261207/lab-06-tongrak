@@ -1,6 +1,6 @@
-import { link } from "fs";
+
 import React, { useCallback, useState } from "react";
-import { Link, Route, Switch, useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 type Params = {
@@ -33,8 +33,6 @@ const PriceHistory = () => {
         setEnd(ev.target.value);
         console.log("End: " + endDate);
     }
-
-
 
     return (
         < div className='text-center space-y-3 space-x-3' >

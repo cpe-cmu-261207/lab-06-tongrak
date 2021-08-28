@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Current from './components/Current';
 import PriceHistory from './components/PriceHistory';
+import HistoryResult from './components/HistoryResult';
 
 function App() {
   return (
@@ -19,10 +20,10 @@ function App() {
           <Current />
         </Route>
         <Route path="/history/select" exact>
-          <PriceHistory />
+          <PriceHistory/>
         </Route>
-        <Route path='/history/result?range'>
-          {/* template for /history/result */}
+        <Route path='/history/result'>
+          {/* template for /history/result
           <div className='text-center space-y-3'>
             <p className='text-2xl font-semibold'>Historical price</p>
             <p className='text-2xl'>Loading ...</p>
@@ -33,7 +34,8 @@ function App() {
               <li className='text-xl'>2021-01-02 - {(2000000).toLocaleString()} THB</li>
               <li className='text-xl'>2021-01-03 - {(3000000).toLocaleString()} THB</li>
             </ul>
-          </div>
+          </div> */}
+          <HistoryResult/>
         </Route>
         <Route path="/about" exact>
           {/* template for about me */}
