@@ -26,7 +26,7 @@ function App() {
         <Route path="/about" exact>
           {/* template for about me */}
           <div className='text-center space-y-3'>
-            <p className='text-2xl font-semibold'>About me</p>
+            <p className='text-2xl font-semibold'>About me:</p>
             <p className='text-xl'>Tongrak Ruento 630610730</p>
           </div>
         </Route>
