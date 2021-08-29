@@ -50,7 +50,8 @@ const HistoryResult = () => {
             if (dataSet != null) {
                 return (
                     <div>
-                        <p className='text-xl font-semibold'> ( From {query.get("start")} To {query.get("end")})</p>
+                        <p className='text-xl font-semibold'> ( From {query.get("start")} To {query.get("end")} )</p>
+                        <br />
                         <ul>
                             {Object.entries(dataSet).map(x => liMaker(x[0], x[1]))}
                         </ul>
@@ -62,7 +63,7 @@ const HistoryResult = () => {
 
     return (
         <div className='text-center space-y-3'>
-            <p className='text-2xl font-semibold'>Historical price:</p>
+            <p className='text-2xl font-semibold'>Historical price</p>
             {render()}
         </div>
     )
