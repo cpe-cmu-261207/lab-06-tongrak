@@ -62,7 +62,7 @@ const HistoryResult = () => {
 
     return (
         <div className='text-center space-y-3'>
-            <p className='text-2xl font-semibold'>Historical price</p>
+            <p className='text-2xl font-semibold'>Historical price:</p>
             {render()}
         </div>
     )

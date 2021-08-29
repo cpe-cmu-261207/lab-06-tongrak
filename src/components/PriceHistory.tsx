@@ -8,9 +8,8 @@ type Params = {
 }
 
 const PriceHistory = () => {
-    const [startDate, setStart] = useState<string>("null");
-    const [endDate, setEnd] = useState<string>("null");
-    // const { range } = useParams<Params>();
+    const [startDate, setStart] = useState<string>();
+    const [endDate, setEnd] = useState<string>();
     const history = useHistory();
     const historyHook = useCallback((inStr) => history.push(inStr), [])
 
@@ -26,17 +25,17 @@ const PriceHistory = () => {
 
     const getStartCB = (ev: React.ChangeEvent<HTMLInputElement>) => {
         setStart(ev.target.value);
-        console.log("Start: " + startDate);
+        // console.log("Start: " + startDate);
     }
 
     const getEndCB = (ev: React.ChangeEvent<HTMLInputElement>) => {
         setEnd(ev.target.value);
-        console.log("End: " + endDate);
+        // console.log("End: " + endDate);
     }
 
     return (
         < div className='text-center space-y-3 space-x-3' >
-            <p className='text-2xl font-semibold'>Select historical range</p>
+            <p className='text-2xl font-semibold'>Select historical range:</p>
             <span>From date</span>
             <input type='date' onChange={getStartCB}></input>
             <span>To date</span>
